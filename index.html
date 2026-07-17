@@ -21,69 +21,102 @@
 <body>
   <main>
     <h1>Privacy Policy for Screen Translator</h1>
-    <p class="updated"><strong>Last updated: July 15, 2026</strong></p>
+    <p class="updated"><strong>Last updated: July 17, 2026</strong></p>
 
-    <p>Screen Translator ("the app") is developed by the app developer identified in the Google Play listing. This Privacy Policy explains what information the app accesses, collects, uses, stores, and shares.</p>
+    <p>Screen Translator ("the app") is developed and published by the developer identified in the app's Google Play listing. This Privacy Policy explains what information the app accesses, collects, uses, stores, and shares when you use the app.</p>
 
     <h2>Information We Handle</h2>
-    <h3>Information created by the app</h3>
+
+    <h3>Account and synchronization information</h3>
     <ul>
-      <li>The app creates an anonymous Firebase Authentication account so points, Premium status, and translation history can be synchronized. No name, email address, phone number, or social-media account is required.</li>
-      <li>The app uses the Android ID to associate a device with its synchronized points and account data. It is used only for synchronization, fraud prevention, and account support.</li>
-      <li>Translation history may include recognized source text, translated text, language selections, timestamps, and optional captured images or image references used by the translation feature.</li>
-      <li>Settings, pending points, translation preferences, and user-provided AI API keys are stored locally on the device. API keys are protected with Android Keystore when available.</li>
+      <li>The app creates an anonymous Firebase Authentication account to synchronize points, Premium status, and translation history. The anonymous account uses a Firebase user ID and does not require your name, email address, phone number, or social-media account.</li>
+      <li>You may optionally link the anonymous account to a Google account using Google Sign-In. If you do so, Firebase may receive and store the Google account identifier and email address provided by Google. Linking is used to preserve points and restore app data and Premium access after reinstalling or using another device.</li>
+      <li>We use the Firebase user ID as the account identifier. The app does not use Android ID to identify or synchronize your account.</li>
+      <li>The account may contain points balance, point-spend ledger entries, reward timestamps, Premium status, Premium expiry time, and account timestamps.</li>
     </ul>
+
+    <h3>Translation history</h3>
+    <p>Translation history may contain recognized source text, translated text, source and target languages, timestamps, OCR and translation engine names. History is stored locally and may be synchronized to the user's Firebase account. The app does not intentionally store captured screen images as translation-history entries.</p>
 
     <h3>Screen content</h3>
-    <p>The app requires user approval through Android MediaProjection before it captures screen content. Captured content is processed to recognize and translate text. Depending on the selected engine:</p>
+    <p>The app displays a prominent disclosure and requests your approval through Android MediaProjection before capturing screen content. Captured screen content is processed to recognize and translate visible text. The app does not capture the screen before you grant that permission.</p>
     <ul>
-      <li>ML Kit can process OCR and translation on the device after its language model is available.</li>
-      <li>Google Online translation sends recognized text to Google's translation service.</li>
-      <li>AI translation sends the text, and when vision translation is enabled the relevant image content, to the AI provider selected by the user. The selected provider's privacy policy also applies.</li>
+      <li>ML Kit may process OCR and translation on the device after the required model is available.</li>
+      <li>When Google Online translation is selected, recognized text is sent to Google's translation service.</li>
+      <li>When an AI translation provider is selected, text is sent to that provider. If vision translation is enabled, relevant image content from the selected translation request may also be sent to that provider.</li>
     </ul>
-    <p>The app does not capture the screen before the user grants MediaProjection permission and does not intentionally collect audio, contacts, location, SMS, or phone-call data.</p>
+    <p>Screen content is not intentionally used for advertising. Users should avoid translating content they do not want to send to a selected online or AI provider.</p>
 
-    <h3>Advertising</h3>
-    <p>The app uses Google Mobile Ads for banner, rewarded, and App Open Ads. Google and its advertising partners may process device information, advertising identifiers, diagnostics, and ad interaction information to provide, measure, and protect advertising. The app gives points only after the user voluntarily chooses to watch a rewarded ad and the ad reports a reward event.</p>
+    <h3>Local information</h3>
+    <p>App settings, pending point changes, language preferences, translation preferences, and user-provided AI API keys are stored locally on the device. API keys are protected with Android Keystore when supported by the device. The app does not intentionally collect audio, contacts, location, SMS, phone-call data, or camera data.</p>
+
+    <h3>Advertising, consent, and app integrity</h3>
+    <p>The app uses Google Mobile Ads for banner, rewarded, and App Open Ads for non-Premium users. Google and its advertising partners may process device information, advertising identifiers, diagnostics, ad requests, and ad interaction information to provide, measure, and protect advertising.</p>
+    <p>Where required, the Google User Messaging Platform (UMP) asks for consent before advertising requests are made. You can review available privacy choices from the app's Settings. If consent does not allow advertising requests, the app does not request ads and rewarded-ad points are unavailable. Ad behavior and available choices may depend on your location, the applicable law, and Google's consent system.</p>
+    <p>Some Firebase callable functions use Firebase App Check and device or app-integrity signals to help prevent abuse and fraudulent point rewards.</p>
+
+    <h3>Premium subscription and payments</h3>
+    <p>The app may offer the auto-renewing Google Play subscription <strong>premium_ad_free_monthly</strong>. Google Play handles payment, billing, renewal, cancellation, and the payment instrument. The app receives purchase information needed to verify the subscription, including a purchase token, product information, purchase state, expiry time, and region information when provided by Google.</p>
+    <p>Premium verification is performed by the backend using Google Play services before Premium access is enabled. An active Premium subscription provides unlimited translation and removes the app's advertising. Your existing points are retained. Prices and local currencies are shown by Google Play and may vary by country.</p>
 
     <h2>How We Use Information</h2>
-    <p>We use information to:</p>
     <ul>
-      <li>provide screen OCR and translation;</li>
-      <li>synchronize points, Premium status, and translation history;</li>
-      <li>prevent duplicate or fraudulent point rewards;</li>
-      <li>save user settings and language models on the device;</li>
-      <li>show and measure advertising for non-Premium users;</li>
-      <li>troubleshoot errors, maintain security, and respond to support requests.</li>
+      <li>Provide OCR, screen translation, translation history, and user-requested online or AI translation.</li>
+      <li>Synchronize points, Premium status, point-spend records, and translation history.</li>
+      <li>Verify subscriptions, restore purchases, prevent duplicate rewards, and detect abuse.</li>
+      <li>Store settings and user-provided API keys on the device.</li>
+      <li>Show and measure advertising for eligible non-Premium users when permitted by consent.</li>
+      <li>Troubleshoot errors, maintain security, and respond to support and deletion requests.</li>
     </ul>
-    <p>We do not sell personal or sensitive user data.</p>
+    <p>We do not sell translation text, screen content, or user-provided AI API keys. We do not use translation content for advertising.</p>
 
     <h2>Service Providers and Sharing</h2>
-    <p>Information may be processed by service providers needed to operate the app:</p>
+    <p>Information may be processed by the following service providers when needed to operate features you use:</p>
     <ul>
-      <li>Firebase Authentication, Cloud Functions, and Firestore for anonymous authentication, synchronization, points, and history;</li>
-      <li>Google Mobile Ads for advertising;</li>
-      <li>Google translation services when Google Online translation is selected;</li>
-      <li>The AI provider selected by the user when AI translation is selected;</li>
+      <li>Firebase Authentication for anonymous and optional Google-linked authentication.</li>
+      <li>Firebase Firestore and Cloud Functions for account synchronization, points, history, reward verification, account deletion, and Premium entitlement checks.</li>
+      <li>Firebase App Check and Google Play Integrity-related services for abuse prevention where enabled.</li>
+      <li>Google Mobile Ads and UMP for advertising and consent management.</li>
+      <li>Google Play Billing and Google Play subscription services for Premium purchases and subscription verification.</li>
       <li>Google ML Kit for on-device OCR and translation models.</li>
+      <li>Google translation services when Google Online translation is selected.</li>
+      <li>The AI provider selected by you when AI translation is selected.</li>
     </ul>
-    <p>The app does not share screen content with an AI provider unless the user selects that provider and starts a translation that requires it. The privacy practices of those providers are controlled by their own policies.</p>
+    <p>The app sends online translation data only when you select and start a feature that requires an online provider. Each provider's own privacy policy and data-retention practices also apply to data it receives.</p>
 
     <h2>Retention and Deletion</h2>
-    <p>Local settings and local history remain on the device until the user clears them, uninstalls the app, or uses Android's app-data controls. Cloud-synchronized history, points, and anonymous account records are retained while needed to provide synchronization and support.</p>
-    <p>You can request deletion of the anonymous account and associated cloud data from <strong>Settings &gt; Delete account and data</strong> in the app. If you cannot access the app, contact <strong>aspirin106@proton.me</strong>. We will delete or anonymize data that is not required for security, fraud prevention, legal, or accounting purposes. The in-app deletion action also clears local app settings and local translation history on that device.</p>
+    <p>Local settings and local translation history remain on the device until you clear them, uninstall the app, or use Android's app-data controls. Cloud account data is retained while needed to provide synchronization, restore access, prevent fraud, maintain security, resolve disputes, or meet legal and accounting obligations.</p>
+    <p>You can delete your account and app data from <strong>Settings &gt; Delete account and data</strong>. The deletion flow removes the Firebase account, user profile, cloud translation history, points, point ledger, and Premium purchase mapping, and clears local app settings and local translation history on that device. If you cannot access the app, contact <a href="mailto:aspirin106@proton.me">aspirin106@proton.me</a>.</p>
+    <p>Deleting the app account does not automatically cancel a Google Play subscription. Manage or cancel the subscription in Google Play. A user may later link the same Google account to restore an active subscription where the purchase remains valid.</p>
+    <p>Some information may be retained or anonymized when required for security, fraud prevention, legal, tax, accounting, or payment-record purposes.</p>
+
+    <h2>Your Choices and Privacy Rights</h2>
+    <ul>
+      <li>Use the app without linking a Google account, although account recovery across devices will be limited.</li>
+      <li>Clear translation history from the app and request deletion of the associated cloud history.</li>
+      <li>Review available advertising privacy choices in Settings when UMP provides that option.</li>
+      <li>Use Google Play controls to manage or cancel a Premium subscription.</li>
+      <li>Request access to, correction of, or deletion of personal information by contacting us. We may need to verify your request and may retain information where permitted or required by law.</li>
+    </ul>
+
+    <h3>United States state privacy notices</h3>
+    <p>Depending on your state and whether the applicable legal thresholds are met, you may have rights such as access to personal information, correction, deletion, portability, and opting out of targeted advertising or certain sales or sharing activities. We do not sell your translation content or screen content. Advertising providers may process device and advertising data as described above; where applicable, you can use the UMP privacy choices or contact us to exercise available rights.</p>
+    <p>We do not discriminate against users for exercising applicable privacy rights. To submit a privacy request, email <a href="mailto:aspirin106@proton.me">aspirin106@proton.me</a> with the subject “Privacy Request”. We will respond as required by applicable law.</p>
+
+    <h3>European Economic Area and United Kingdom</h3>
+    <p>Where applicable, you may have rights to access, correct, delete, restrict, or object to processing, and to data portability. You may also complain to your local data-protection authority. UMP consent choices and the app's privacy choices are used where required for advertising.</p>
 
     <h2>Security</h2>
-    <p>We use HTTPS for network communication and Android Keystore protection for locally stored AI API keys when supported by the device. No method of storage or transmission is completely secure, so users should not submit information they are not comfortable sending to a selected translation provider.</p>
+    <p>We use HTTPS for network communication, Firebase security controls, backend verification for rewards and subscriptions, and Android Keystore protection for locally stored AI API keys when supported by the device. No storage or transmission method is completely secure. Do not submit information you are not comfortable sending to a selected translation or AI provider.</p>
 
     <h2>Children's Privacy</h2>
-    <p>The app is not directed to children under 13 and does not knowingly collect personal information from children. If you believe a child has provided personal information, contact us so we can review and remove it where appropriate.</p>
+    <p>The app is not directed to children under 13 and is not designed to knowingly collect personal information from children. If you believe a child has provided personal information, contact us so we can review and delete it where appropriate.</p>
 
     <h2>Changes to This Policy</h2>
-    <p>We may update this policy when the app's data practices or legal requirements change. The updated version will show a new "Last updated" date and will be made available at the public Privacy Policy URL used in the Google Play listing.</p>
+    <p>We may update this policy when the app's data practices, services, or legal requirements change. The updated version will show a new “Last updated” date and will be available at the public Privacy Policy URL used in the Google Play listing.</p>
 
     <h2>Contact</h2>
-    <p>For privacy questions or deletion requests, contact:</p>
+    <p>For privacy questions, rights requests, or deletion requests, contact:</p>
     <p><strong>Email:</strong> <a href="mailto:aspirin106@proton.me">aspirin106@proton.me</a></p>
   </main>
 </body>
